@@ -11,6 +11,7 @@ export default defineConfig({
   test: {
     globals: true, // グローバルにテストユーティリティを提供
     environment: 'happy-dom', // 仮想DOMを使用することでブラウザの動作をエミュレート
+    setupFiles: ["vitest-setup.ts"], // セットアップファイルを指定
     coverage: {
       provider: 'v8', // V8エンジンを使用したカバレッジの生成
       reporter: ['text', 'json', 'html'], // 生成するレポートのフォーマット
